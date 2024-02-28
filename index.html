@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debbie Gaming</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Add glowing effect on hover */
+        .glow-on-hover {
+            transition: 0.2s;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .glow-on-hover:hover {
+            box-shadow: 0 0 30px rgba(255, 255, 255, 1);
+        }
+
+        /* Hover effect on News Cards */
+        .news-card {
+            border: 2px solid transparent;
+            /* Transparent border by default */
+            transition: border-color 0.2s;
+            /* Smooth transition for border color */
+        }
+
+        .news-card:hover {
+            border-color: #f6e05e;
+            /* Yellow color on hover */
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen bg-gray-800 text-teal-300">
+    <header class="bg-gray-900">
+        <div class="w-4/5 my-auto mx-auto">
+            <nav class="flex items-center justify-center">
+                <ul class="flex items-center justify-center list-none py-5">
+                    <li><a href="#home"
+                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Home</a>
+                    </li>
+                    <li><a href="#reviews"
+                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Reviews</a>
+                    </li>
+                    <li><a href="#videos"
+                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Videos</a>
+                    </li>
+                </ul>
+                <a href="#" class="glow-on-hover">
+                    <img src="DebbieGamingLogo.webp" alt="Debbie Gaming Logo" class="h-12">
+                </a>
+                <ul class="flex items-center justify-center list-none py-5">
+                    <li><a href="#about"
+                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">About</a>
+                    </li>
+                    <li><a href="#contact"
+                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Contact</a>
+                    </li>
+                    <li><a href="#deborahs-quest"
+                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Deborah's
+                            Quest Update</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="flex-1 bg-gray-700 text-gray-100">
+        <section id="welcome" class="py-10 px-0 text-center">
+            <div class="w-4/5 my-0 mx-auto">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-10">
+                    <div class="flex-1 text-center md:text-left md:w-1/2">
+                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Welcome to Debbie Gaming</h1>
+                        <p class="text-lg">Join our laid-back community for game reviews, video content, and our
+                            exclusive game, Deborah's Quest. Build, explore, and connect with friends.</p>
+                    </div>
+                    <div class="flex-1 relative md:w-1/2">
+                        <div class="relative" style="padding-top: 56.25%;">
+                            <iframe class="absolute top-0 left-0 w-full h-full"
+                                src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen class="absolute inset-0 w-full h-full"></iframe>
+                            <div
+                                class="video-description absolute bottom-4 left-4 bg-black bg-opacity-50 text-white py-1 px-2 rounded">
+                                Description of the first video</div>
+                        </div>
+                        <!-- Additional videos can be added here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest News & Updates Section -->
+        <section class="py-16 bg-gray-800 text-center">
+            <div class="flex flex-col items-start mx-auto pl-4 mx-auto">
+                <h2 class="text-2xl font-bold text-gray-300 mb-0 inline-block">Latest News & Updates <a href="#"
+                        class="text-base text-teal-400 mb-8 inline-block underline">View All News</a></h2>
+                <div class="flex flex-wrap justify-start gap-8">
+                    <!-- Sample News Card -->
+                    <div
+                        class="w-full md:w-1/3 lg:w-1/5 bg-gray-700 rounded-lg overflow-hidden shadow-lg news-card hover:border-yellow-400 hover:cursor-pointer">
+                        <img src="game_news1.webp" alt="News Image" class="w-full h-36 object-cover">
+                        <div class="p-4">
+                            <p class="text-gray-500">January 25, 2024</p>
+                            <h3 class="text-xl font-semibold text-teal-300 mt-2 mb-4">New Game Release: "Adventure
+                                Awaits"</h3>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full md:w-1/3 lg:w-1/5 bg-gray-700 rounded-lg overflow-hidden shadow-lg news-card hover:border-yellow-400 hover:cursor-pointer">
+                        <img src="game_news2.webp" alt="News Image" class="w-full h-36 object-cover">
+                        <div class="p-4">
+                            <p class="text-gray-500">January 25, 2024</p>
+                            <h3 class="text-xl font-semibold text-teal-300 mt-2 mb-4">New Game Release: "Adventure
+                                Awaits"</h3>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full md:w-1/3 lg:w-1/5 bg-gray-700 rounded-lg overflow-hidden shadow-lg news-card hover:border-yellow-400 hover:cursor-pointer">
+                        <img src="game_news3.webp" alt="News Image" class="w-full h-36 object-cover">
+                        <div class="p-4">
+                            <p class="text-gray-500">January 25, 2024</p>
+                            <h3 class="text-xl font-semibold text-teal-300 mt-2 mb-4">New Game Release: "Adventure
+                                Awaits"</h3>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full md:w-1/3 lg:w-1/5 bg-gray-700 rounded-lg overflow-hidden shadow-lg news-card hover:border-yellow-400 hover:cursor-pointer">
+                        <img src="game_news4.webp" alt="News Image" class="w-full h-36 object-cover">
+                        <div class="p-4">
+                            <p class="text-gray-500">January 25, 2024</p>
+                            <h3 class="text-xl font-semibold text-teal-300 mt-2 mb-4">New Game Release: "Adventure
+                                Awaits"</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Additional section -->
+        <section class="py-16 bg-gray-800 text-center">
+            <div class="container mx-auto">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Not sure what game to play?</h1>
+                <p class="text-lg mb-8">That's ok! We've got you covered with our game reviews!</p>
+                <p class="text-lg mb-8">Whether you're looking for a rogue-like experience, an open-world sandbox, or
+                    a battle royale, we've got you covered! We provide you with an overview of the game experience while
+                    withholding spoilers; like a teaser in the back of a good book.</p>
+                <img src="overwatch_gameplay.webp" alt="Action Shot" class="mx-auto mb-8 rounded-lg shadow-lg">
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-teal-300 py-5">
+        <div class="w-4/5 my-0 mx-auto flex justify-center">
+            <p>&copy; 2024 Debbie Gaming. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
