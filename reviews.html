@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debbie Gaming - Reviews</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Add glowing effect on hover */
+        .glow-on-hover {
+            transition: 0.2s;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .glow-on-hover:hover {
+            box-shadow: 0 0 30px rgba(255, 255, 255, 1);
+        }
+
+        /* Hover effect on News Cards */
+        .news-card {
+            border: 2px solid transparent;
+            /* Transparent border by default */
+            transition: border-color 0.2s;
+            /* Smooth transition for border color */
+        }
+
+        .news-card:hover {
+            border-color: #f6e05e;
+            /* Yellow color on hover */
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen bg-gray-800 text-teal-300">
+    <header class="bg-gray-900">
+        <div class="w-4/5 my-auto mx-auto">
+            <nav class="flex items-center justify-center">
+                <ul class="flex items-center justify-center list-none py-5">
+                    <li><a href="./index.html"
+                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Home</a>
+                    </li>
+                    <li><a href="#reviews"
+                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Reviews</a>
+                    </li>
+                    <li><a href="./videos.html"
+                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Videos</a>
+                    </li>
+                </ul>
+                <a href="#" class="glow-on-hover">
+                    <img src="DebbieGamingLogo.webp" alt="Debbie Gaming Logo" class="h-12">
+                </a>
+                <ul class="flex items-center justify-center list-none py-5">
+                    <li><a href="./about.html"
+                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">About</a>
+                    </li>
+                    <li><a href="./contact.html"
+                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Contact</a>
+                    </li>
+                    <li><a href="#deborahs-quest"
+                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Deborah's
+                            Quest Update</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-1 bg-gray-700 text-gray-100">
+        <section id="reviews" class="py-10 px-0 text-center">
+            <div class="w-4/5 my-0 mx-auto">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Game Reviews</h1>
+                <!-- Filter/Search form -->
+                <form class="mb-8">
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <input type="text" placeholder="Search by title..."
+                            class="px-4 py-2 text-slate-400 rounded-lg border border-gray-600 focus:outline-none">
+                        <select class="px-4 py-2 text-slate-400 rounded-lg border border-gray-600 focus:outline-none">
+                            <option value="" disabled selected>Select genre</option>
+                            <option value="action">Action</option>
+                            <option value="adventure">Adventure</option>
+                            <option value="rpg">RPG</option>
+                            <!-- Add more genres as needed -->
+                        </select>
+                        <input type="date"
+                            class="px-4 py-2 text-slate-400 rounded-lg border border-gray-600 focus:outline-none">
+                        <button type="submit"
+                            class="bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 rounded-lg">Filter</button>
+                    </div>
+                </form>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Review cards -->
+                    <div
+                        class="bg-gray-800 rounded-lg overflow-hidden shadow-lg news-card hover:border-yellow-400 hover:cursor-pointer">
+                        <img src="overwatch_gameplay.webp" alt="Game Cover" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-teal-300 mb-2">Overwatch</h3>
+                            <p class="text-gray-500">Review Date: December 05, 2023</p>
+                            <p class="text-gray-300 mt-2">A Brilliant team-based PvP game!</p>
+                            <a href="#" class="text-teal-400 mt-4 block hover:underline">Read More</a>
+                        </div>
+                    </div>
+                    <!-- Additional review cards can be added here -->
+                    <div
+                        class="bg-gray-800 rounded-lg overflow-hidden shadow-lg news-card hover:border-yellow-400 hover:cursor-pointer">
+                        <img src="finalfantasy14online_gameplay.jpg" alt="Game Cover" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-teal-300 mb-2">Final Fantasy 14 Online</h3>
+                            <p class="text-gray-500">Review Date: January 25, 2024</p>
+                            <p class="text-gray-300 mt-2">An immersive mmorpg</p>
+                            <a href="#" class="text-teal-400 mt-4 block hover:underline">Read More</a>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-gray-800 rounded-lg overflow-hidden shadow-lg news-card hover:border-yellow-400 hover:cursor-pointer">
+                        <img src="rocketleague_gameplay.webp" alt="Game Cover" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-teal-300 mb-2">Rocket League</h3>
+                            <p class="text-gray-500">Review Date: Feb 4, 2024</p>
+                            <p class="text-gray-300 mt-2">A fast pased car soccer game that'll keep you on your toes.
+                            </p>
+                            <a href="#" class="text-teal-400 mt-4 block hover:underline">Read More</a>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-gray-800 rounded-lg overflow-hidden shadow-lg news-card hover:border-yellow-400 hover:cursor-pointer">
+                        <img src="sot_gameplay.jpg" alt="Game Cover" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-teal-300 mb-2">Sea of Thieves</h3>
+                            <p class="text-gray-500">Review Date: Feb 20, 2024</p>
+                            <p class="text-gray-300 mt-2">Get lost in the massive sea where golds a plenty!</p>
+                            <a href="#" class="text-teal-400 mt-4 block hover:underline">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="bg-gray-900 text-teal-300 py-5">
+        <div class="w-4/5 my-0 mx-auto flex justify-center">
+            <p>&copy; 2024 Debbie Gaming. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
