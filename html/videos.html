@@ -37,7 +37,7 @@
 <body class="flex flex-col min-h-screen bg-gray-800 text-teal-300">
     <header class="bg-gray-900">
         <div class="w-4/5 my-auto mx-auto">
-            <nav class="flex items-center max-[870px]:justify-start min-[871px]:justify-center">
+            <nav class="flex items-center max-[870px]:justify-start min-[871px]:justify-center overflow-hidden">
                 <!-- Hamburger Icon for Mobile -->
                 <button id="mobile-menu-toggle"
                     class="block md:hidden text-gray-300 hover:text-white focus:text-white focus:outline-none">
@@ -48,28 +48,29 @@
                 </button>
                 <ul id="nav-links" class="hidden md:flex items-center justify-center list-none">
                     <li><a href="./index.html"
-                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Home</a>
+                            class="no-underline px-4 py-5 md:px-7 md:py-4 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Home</a>
                     </li>
                     <li><a href="./reviews.html"
-                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Reviews</a>
+                            class="no-underline px-4 py-5 md:px-7 md:py-4 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Reviews</a>
                     </li>
                     <li><a href="./videos.html"
-                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Videos</a>
+                            class="no-underline px-4 py-5 md:px-7 md:py-4 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Videos</a>
                     </li>
                     <!-- Logo -->
                     <a href="#" class="glow-on-hover">
                         <img src="../imgs/DebbieGamingLogo.webp" alt="Debbie Gaming Logo" class="h-12 hidden md:block">
                     </a>
                     <li><a href="./about.html"
-                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">About</a>
+                            class="no-underline px-4 py-5 md:px-7 md:py-4 transition duration-300 hover:text-teal-400 hover:bg-teal-900">About</a>
                     </li>
                     <li><a href="./contact.html"
-                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Contact</a>
+                            class="no-underline px-4 py-5 md:px-7 md:py-4 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Contact</a>
                     </li>
-                    <li><a href="#deborahs-quest"
-                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Deborah's
+                    <li><a href="./deborah_updates.html"
+                            class="no-underline px-4 py-5 md:px-7 md:py-4 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Deborah's
                             Quest Update</a></li>
                 </ul>
+
             </nav>
         </div>
     </header>
@@ -86,7 +87,7 @@
             </svg>
         </button>
         <ul class="text-white text-center mt-8">
-            <li><a href="./index.html"
+            <li><a href="#home"
                     class="block py-3 px-4 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Home</a>
             </li>
             <li><a href="./reviews.html"
@@ -101,7 +102,7 @@
             <li><a href="./contact.html"
                     class="block py-3 px-4 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Contact</a>
             </li>
-            <li><a href="#deborahs-quest"
+            <li><a href="./deborah_updates.html"
                     class="block py-3 px-4 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Deborah's
                     Quest Update</a></li>
         </ul>
