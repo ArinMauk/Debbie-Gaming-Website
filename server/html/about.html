@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Debbie Gaming</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Add glowing effect on hover */
+        .glow-on-hover {
+            transition: 0.2s;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .glow-on-hover:hover {
+            box-shadow: 0 0 30px rgba(255, 255, 255, 1);
+        }
+
+        /* Hover effect on News Cards */
+        .news-card {
+            border: 2px solid transparent;
+            /* Transparent border by default */
+            transition: border-color 0.2s;
+            /* Smooth transition for border color */
+        }
+
+        .news-card:hover {
+            border-color: #f6e05e;
+            /* Yellow color on hover */
+            cursor: pointer;
+        }
+
+        @keyframes rainbow {
+            0% {
+                color: red;
+            }
+
+            16.666% {
+                color: orange;
+            }
+
+            33.333% {
+                color: yellow;
+            }
+
+            50% {
+                color: green;
+            }
+
+            66.666% {
+                color: blue;
+            }
+
+            83.333% {
+                color: indigo;
+            }
+
+            100% {
+                color: violet;
+            }
+        }
+
+        .dramatic-span {
+            font-weight: bold;
+            /* Make the text bold */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            /* Add a text shadow */
+            letter-spacing: 3px;
+            /* Increase letter spacing for emphasis */
+            animation: rainbow 5s infinite;
+            /* Apply rainbow animation */
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen bg-gray-800 text-teal-300">
+    <header class="bg-gray-900">
+        <div class="w-4/5 my-auto mx-auto">
+            <nav class="flex items-center justify-center">
+                <ul class="flex items-center justify-center list-none py-5">
+                    <li><a href="./index.html"
+                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Home</a>
+                    </li>
+                    <li><a href="./reviews.html"
+                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Reviews</a>
+                    </li>
+                    <li><a href="./videos.html"
+                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Videos</a>
+                    </li>
+                </ul>
+                <a href="#" class="glow-on-hover">
+                    <img src="../imgs/DebbieGamingLogo.webp" alt="Debbie Gaming Logo" class="h-12">
+                </a>
+                <ul class="flex items-center justify-center list-none py-5">
+                    <li><a href="./about.html"
+                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">About</a>
+                    </li>
+                    <li><a href="./contact.html"
+                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Contact</a>
+                    </li>
+                    <li><a href="#deborahs-quest"
+                            class="no-underline px-4 py-5 transition duration-300 hover:text-teal-400 hover:bg-teal-900">Deborah's
+                            Quest Update</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-1 bg-gray-700 text-gray-100">
+        <section id="about" class="py-10 px-0 text-center">
+            <div class="w-4/5 my-0 mx-auto">
+                <div class="mb-8 mx-auto">
+                    <h1 class="text-3xl text-teal-400 mb-4">About Us</h1>
+                    <p class="text-lg text-yellow-400 w-3/5 mb-8 mx-auto">Welcome to Debbie Gaming! We are gamers
+                        dedicated to
+                        providing honest and insightful reviews,
+                        entertaining videos, and engaging content about the world of gaming.
+                    </p>
+                    <img src="../imgs/debbiegaming_aboutus.jpg" alt="Debbie Gaming Group Picture"
+                        class="mx-auto mb-4 rounded-lg shadow-lg" width="600" height="500">
+                </div>
+                <div class="text-center"> <!-- Added text-center class here -->
+                    <h2 class="text-2xl text-teal-400 mb-4 text-left">Our Story</h2>
+                    <p class="text-lg text-gray-400 mb-8 text-left">"<span class="text-green-400">We're having a halo
+                            party at Ryans this weekend.
+                            You can arrive around 7:00 p.m."</span> This was told
+                        to all the swimmers after practice one day in early October back in 2010. Everyone who had an
+                        xbox brought one the day of the party. Now when you think of a
+                        highschool party, what do people normally think? Drinking? Sex? Loud music? Well, for us
+                        swimmers, it was all about gaming. and snacks. Specifically flaming
+                        hot cheetos, moutain dew, and, of course, <span class="dramatic-span">LITTLE DEBBIE SNACK
+                            CAKES!</span> The
+                        environment was very
+                        different from what you'd normally expect, but we embraced the situation
+                        and made jokes and later, we decided to mess around and say we were an esports team, Little
+                        Debbie.
+                    </p>
+
+                    <p class="text-lg text-gray-400 mb-8 text-left">
+                        We mostly made Debbie Gaming as a gag joke, but decided to
+                        just enter into local competitions
+                        for shits and giggles. We liked to pretend to be a professional
+                        esports team; it was fun to entertain the idea. We did Microsoft store competitions for
+                        Fortnite, Halo, and Rocket League. We even competed in some online
+                        games as well, like Call Of Duty.
+                    </p>
+                    <p class="text-lg text-gray-400 mb-8 text-left">
+                        Debbie Gaming really became more than a gag joke and more
+                        of an association to a group of
+                        friends. This happened all from one tournament: The Halo 2 World Championships.
+                        Now remember, we were swimmers and spent a lot of our time swimming and doing school. We loved
+                        to play Halo, we certainly weren't professional level. We had a lot of
+                        swimmers who wanted to experience the championship. Anyone could join if they had a team name
+                        and gamertags. So, we had 2 teams for Debbie Gaming. I think that's what
+                        screwed us to be honest. 64 teams or so entered for this tournament. The people organizing the
+                        bracket must've thought we were some unheard of legends or something because
+                        our best team had their first match against one of the top 8 teams competing for the grand
+                        $50,000 prize. Team slayer: 4-50, Capture the flag: 0-3, Bombs: 0-3. We
+                        got recked hard. Needless to say, the whole experience was fun and engaging and ultimately
+                        brought all of us swimmers together past just team mates, but good friends
+                        as well. That's our story in a nutshell!
+                    </p>
+                    <p class="text-lg text-gray-400 mb-8 text-left">Feel free to explore our website, check out our
+                        latest reviews and
+                        videos, and don't hesitate to reach out to us if you have any questions or suggestions. Happy
+                        gaming!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-teal-300 py-5">
+        <div class="w-4/5 my-0 mx-auto flex justify-center">
+            <p>&copy; 2024 Debbie Gaming. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
