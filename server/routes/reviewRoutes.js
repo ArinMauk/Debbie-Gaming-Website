@@ -1,21 +1,48 @@
 const express = require('express');
 const router = express.Router();
+const multer = require('multer');
+const path = require('path');
 const Review = require('../models/Review');
 
-// Create Review
-router.post('/newReview', async (req, res) => {
+// Set up multer storage
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, path.join(__dirname, '..', 'html', 'imgs')); // Save images to '../imgs' folder
+    },
+    filename: function (req, file, cb) {
+        cb(null, Date.now() + '-' + file.originalname); // Generate unique filename
+    }
+});
+
+// Initialize multer upload instance
+const upload = multer({ storage: storage });
+
+// Create Review with image upload
+router.post('/newReview', upload.single('thumbnail'), async (req, res) => {
     try {
-        // Extract review details from request body.
-        const { title, content, genre, date, author, rating } = req.body;
+        // Extract review details from request body
+        const { title, genre, date, author, rating } = req.body;
+        const thumbnailPath = req.file ? req.file.path : null; // Check if image uploaded
+
+        // Parse sections from FormData
+        const sections = [];
+        for (let i = 0; i < req.body.section.length; i++) {
+            const section = req.body.section[i];
+            sections.push({
+                type: section.type,
+                content: section.content
+            });
+        }
 
         // Create a new instance of the Review model
         const review = new Review({
             title,
-            sections: content,
+            sections,
             genre,
             date,
             author,
-            rating
+            rating,
+            thumbnail: thumbnailPath // Save image path in thumbnail field
         });
 
         // Save the review to the database
@@ -50,7 +77,7 @@ router.get('/reviews', async (req, res) => {
 // Update a review
 router.put('/reviews/:id', async (req, res) => {
     try {
-
+        // Update review logic
     } catch (error) {
         console.error('Error updating review: ', error);
         res.status(500).json({ message: 'Internal Server error' });
@@ -60,11 +87,11 @@ router.put('/reviews/:id', async (req, res) => {
 // Delete a review
 router.delete('/reviews/:id', async (req, res) => {
     try {
-
+        // Delete review logic
     } catch (error) {
         console.error('Error deleting review: ', error);
         res.status(500).json({ message: 'Internal Server error' });
     }
-})
+});
 
 module.exports = router;

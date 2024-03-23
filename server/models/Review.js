@@ -33,7 +33,9 @@ const reviewSchema = new mongoose.Schema({
         min: 1,
         max: 5
     },
-    // Additional fields can be added as needed
+    thumbnail: {
+        type: String // Store file path or URL here
+    }
 });
 
 // Create a Mongoose model based on the schema

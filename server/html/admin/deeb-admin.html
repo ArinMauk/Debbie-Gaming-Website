@@ -111,27 +111,32 @@
             const date = new Date(document.getElementById('date').value); // Parse date
             const rating = +document.getElementById('rating').value; // Parse rating
             const author = document.getElementById('author').value;
+            const thumbnail = document.getElementById('thumbnail').files[0];
+
+            const formData = new FormData();
+            formData.append('title', title);
+            formData.append('genre', genre);
+            formData.append('date', date.toISOString());
+            formData.append('author', author);
+            formData.append('rating', rating);
+            formData.append('thumbnail', thumbnail);
+
+            // Append each section of content to the FormData object
+            content.forEach((section, index) => {
+                formData.append(`section[${index}][type]`, section.type);
+                formData.append(`section[${index}][content]`, section.content);
+            });
 
             try {
                 const response = await fetch('/review/newReview', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        title,
-                        content,
-                        genre,
-                        date,
-                        author,
-                        rating
-                    })
+                    body: formData
                 });
 
                 const data = await response.json();
                 console.log('Response:', data);
             } catch (error) {
-                console.error('Error:', error);
+                console.log('Error:', error);
             }
         }
 
